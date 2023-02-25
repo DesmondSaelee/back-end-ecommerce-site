@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
-
+// once you have finish routes and save it in insomnia. save the route tests and export it to the read me or in the submit file to make it easy on grader.
+// /api/categories/
 router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products

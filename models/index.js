@@ -4,7 +4,7 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
-
+// add on delete. delete a category and the product disappears
 Product.belongsTo(Category,{
   foreignKey: 'category_id',
 
