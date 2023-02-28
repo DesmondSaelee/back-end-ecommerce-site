@@ -4,14 +4,17 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
-// add on delete. delete a category and the product disappears
+
+
 Product.belongsTo(Category,{
   foreignKey: 'category_id',
 
 })
-
+// add on delete. delete a category and the product disappears
 Category.hasMany(Product, {
-  foreignKey: 'category_id'
+  foreignKey: 'category_id',
+  onDelete: 'Cascade'
+  
 })
 
 Product.belongsToMany(Tag, {
